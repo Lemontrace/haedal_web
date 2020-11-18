@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid</title>
+    <style>
+        h1, p{
+            text-align:center;
+            color:white;
+            background:pink;
+        }
+        #grid{
+            border:5px solid pink;
+            display:grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: repeat(1fr)
+        }
+        div{
+            border:1px solid black;
+            text-align:center;
+        }
+        .description{color:grey;}
+        a{
+            font-family: Arial;
+            color: black;
+        }
+        @keyframes rainbow {
+            0% {color:red;}
+            25% {color:yellow;}
+            50% {color:green;}
+            75% {color:blue;}
+            100% {color:red;}
+        }
+        a:hover{
+            animation-name: rainbow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @media(max-width:800px){
+            #grid{
+                border: none;
+                display: block;
+            }
+            .key{
+                border:5px solid pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕하세요!</h1>
+    <p>
+        저는 경북대학교 20학번 조이입니다.<br>
+        제가 좋아하는 것들의 목록입니다.
+    </p>
+    <div id="grid">
+        <div class="key">
+            <a href="https://www.google.com/search?q=돈">돈</a>
+        </div>
+        <div class="description">
+            모두가 좋아하는 듯 한 돈, 저도 좋아한답니다.ㅎ<br>
+            <img width="200px" height="200px" src="https://www.investopedia.com/thmb/lqOcGlE7PI6vLMzhn5EDdO0HvYk=/1337x1003/smart/filters:no_upscale()/GettyImages-1054017850-7ef42af7b8044d7a86cfb2bff8641e1d.jpg">
+        </div>
+
+        <div class="key"><a href="candy.html">달달한 것</a></div>
+        <div class="description">
+            사실 저는 설탕중독??? 달달한거 좋아해요<br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Candy_in_Damascus.jpg/1200px-Candy_in_Damascus.jpg" width="200px" height="200px">
+        </div>
+
+        <div class="key"><a href="https://www.google.com/search?q=루비">프로그래밍</a></div>
+        <div class="description">
+            제가 이 과에 있는 이유<br>
+            <img width="200px" height="200px" src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F240FE535585CC3EE27">
+        </div>
+
+        <div class="key"><a href="https://www.google.com/search?q=해피 슈가 라이프">Bittersweet한 이야기</a></div>
+        <div class="description">해피엔딩보다는 새드/배드엔딩이 좋아요.<br>밖에도 달콤씁쓸한 이야기를 좋아합니다.</div>
+    </div>
+    <p><a href="animation.html">눈뽕주의</a></p>
+</body>
+</html>
